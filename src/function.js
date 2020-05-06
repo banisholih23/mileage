@@ -1,6 +1,6 @@
 module.exports function mileage(waktuAwal, waktuAkhir) {
     var vo = 6
-    for(let t=10.1221; t<=10.17.21; t + 2) {
+    for(let t=10.1221; t<=10.1721; t + 2) {
         var a = 2
         if(t >= 300) {
             a = 8
