@@ -1,14 +1,26 @@
-module.exports function mileage(waktuAwal, waktuAkhir) {
-    var vo = 6
-    for(let t=10.1221; t<=10.1721; t + 2) {
-        var a = 2
-        if(t >= 300) {
-            a = 8
-        }
-        for(let t=10.1721; t<=12.0000; t + 1)
-            a = 9
-            var s = vo * t + a * t * t / 2
-    }
-    console.log(s)
-}
+//program menghitung jarak tempuh (UPDATE)
 
+const mileage = (start, end) => { //membuat 2 paramater
+    let speed = 6
+    let distance = 0
+    startDate = new Date(`2020-05-06T${start}`).getTime() / 1000 //menentukan selisih waktu dengan method date
+    endDate = new Date(`2020-05-06T${end}`).getTime() / 1000
+
+    let disSecond = endDate - startDate // menghitung hasil selisih waktu
+
+    const Minute = (second) => second / 60 // hasil second dibagi 60
+
+    for(let i = 0; i < disSecond; i++) {
+        if(Minute(i) == 5) { //setelah 5 menit kecepatan dinaikan 
+            speed+=2 // kecepatan dinaikan 2ms
+        }
+        if((Minute(i)-5) % 10 == 0) { //setelah 10 menit kecepatan naik
+            if(Minute(i) != 5) {
+                speed++ // kecepatan naik +1
+            } 
+        }
+        distance += speed
+    }
+    return distance / 1000
+}
+module.exports = mileage

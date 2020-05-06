@@ -1,3 +1,3 @@
-var mileage = require ('./src/function.js')
+const mileage = require('./src/function.js')
 
-mileage(10.1221, 12.0000)
+console.log(mileage('10:12:21' , '12:00:00') + ' KM' )
