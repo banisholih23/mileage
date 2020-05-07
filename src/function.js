@@ -19,7 +19,7 @@ const mileage = (start, end) => { //membuat 2 paramater
                 speed++ // kecepatan naik jadi 1m/s
             } 
         }
-        distance += speed
+        distance = distance + speed
     }
     return distance / 1000
 }
