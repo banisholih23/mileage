@@ -15,8 +15,8 @@ const mileage = (start, end) => { //membuat 2 paramater
             speed+=2 // kecepatan dinaikan 2ms
         }
         if((minute(i)-5) % 10 == 0) { //setelah 10 menit kecepatan naik
-            if(minute(i) > 5) {
-                speed++ // kecepatan naik +1
+            if(minute(i) > 5) { // jika kecepatan lebih dari 5 menit (6,7,8,9 dst..)
+                speed++ // kecepatan naik jadi 1m/s
             } 
         }
         distance += speed
