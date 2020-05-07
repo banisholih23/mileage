@@ -8,14 +8,14 @@ const mileage = (start, end) => { //membuat 2 paramater
 
     let disSecond = endDate - startDate // menghitung hasil selisih waktu
 
-    const Minute = (second) => second / 60 // hasil second dibagi 60
+    const minute = (second) => second / 60 // hasil second dibagi 60
 
     for(let i = 0; i < disSecond; i++) {
-        if(Minute(i) == 5) { //setelah 5 menit kecepatan dinaikan 
+        if(minute(i) == 5) { //setelah 5 menit kecepatan dinaikan 
             speed+=2 // kecepatan dinaikan 2ms
         }
-        if((Minute(i)-5) % 10 == 0) { //setelah 10 menit kecepatan naik
-            if(Minute(i) != 5) {
+        if((minute(i)-5) % 10 == 0) { //setelah 10 menit kecepatan naik
+            if(minute(i) > 5) {
                 speed++ // kecepatan naik +1
             } 
         }
